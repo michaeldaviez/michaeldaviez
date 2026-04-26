@@ -27,6 +27,7 @@ body {
     box-shadow: 4px 0px 24px black;
     position: relative;
     overflow: hidden;
+    backdrop-filter: blur(14px);
 }
 
 .link-prof {
@@ -87,4 +88,17 @@ body {
 }
 .link-links nav ul li a:hover {
     background: hsl(0, 0%, 15%);
+}
+
+.link-footer {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.link-footer p {
+    font-size: 0.85rem;
+    color: hsl(0, 0%, 30%);
 }
