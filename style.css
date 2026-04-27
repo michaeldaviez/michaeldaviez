@@ -29,7 +29,9 @@ body {
     overflow: hidden;
     backdrop-filter: blur(14px);
     user-select: none;
+    position: relative;
 }
+
 
 .link-prof {
     height: 200px;
@@ -47,11 +49,13 @@ body {
 }
 
 .link-description {
-    height: 60px;
+    min-height: 60px;
+    margin-bottom: 15px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 .link-description h2 {
@@ -60,6 +64,11 @@ body {
     text-transform: uppercase;
     letter-spacing: -1px;
     font-size: 32px;
+}
+.link-description p {
+    color: hsl(0, 0%, 40%);
+    font-size: 0.85rem;
+    font-weight: 600;
 }
 
 .link-links {
@@ -89,6 +98,23 @@ body {
 
 .link-links button:hover {
     background: hsl(0, 0%, 15%);
+    transform: scale(1.1);
+}
+
+.yt:hover {
+   background: red !important;
+   border: 1px solid red;
+   color: hsl(0, 0%, 95%);
+}
+
+.tt:hover {
+   background: #ff0050 !important;
+   border: 1px solid #ff0050;
+   color: hsl(0, 0%, 95%);    
+}
+
+.link-links button span {
+    font-weight: 700;
 }
 
 .link-footer {
@@ -103,4 +129,255 @@ body {
     font-size: 0.85rem;
     color: hsl(0, 0%, 30%);
     font-weight: 300;
+}
+
+.link-footer p span {
+    font-weight: 500;
+}
+
+.linktree-holder {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.linktree-box {
+    background: linear-gradient(to top right, hsl(0, 0%, 5%) 75%, hsl(0, 0%, 5%, 0.7));
+    backdrop-filter: blur(14px);
+    min-height: 700px;
+    width: 400px;
+    border-radius: 16px;
+    border: 1px solid hsl(0, 0%, 15%);
+    box-shadow: 2px 0px 24px hsl(0, 0%, 10%);
+}
+
+.linktree-links {
+    /* background: orange; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+}
+
+.linktree-card-yt {
+    background: hsl(0, 0%, 5%);
+    border: 1px solid hsl(0, 0%, 15%);
+    height: 60px;
+    width: 350px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+    text-decoration: none;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.linktree-card-yt:hover {
+    border: 1px solid red;
+}
+
+.linktree-card-yt:hover .linktree-card-icon {
+    border: 1px solid red;
+    background: rgba(255, 0, 0, 0.1);
+}
+
+.linktree-card-yt:hover .linktree-card-icon i {
+    color: red;
+}
+
+.linktree-card-yt::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    transition: all 0.3s;
+}
+
+.linktree-card-yt:hover::before {
+    background: linear-gradient(to right, rgba(255, 0, 0, 0.2), transparent) !important;
+}
+
+.linktree-card-icon {
+    height: 45px;
+    width: 45px;
+    border: 1px solid hsl(0, 0%, 15%);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.linktree-card-icon i {
+    font-size: 1.3rem;
+    color: hsl(0, 0%, 80%);
+    transition: all 0.3s;
+}
+
+.linktree-texts {
+    padding: 0px 10px;
+}
+
+.linktree-texts h4 {
+    color: hsl(0, 0%, 95%);
+    font-weight: 600;
+}
+
+.linktree-texts h4 span {
+    color: hsl(0, 0%, 50%);
+    font-weight: 400;
+    font-size: 0.75rem;
+    padding: 0px 6px;
+}
+
+.linktree-card-tt {
+    background: hsl(0, 0%, 5%);
+    border: 1px solid hsl(0, 0%, 15%);
+    height: 60px;
+    width: 350px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+    text-decoration: none;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.linktree-card-tt:hover {
+    border: 1px solid #ff0050;
+}
+
+.linktree-card-tt:hover .linktree-card-icon {
+    border: 1px solid #ff0050;
+    background: rgba(255, 0, 80, 0.1);
+}
+
+.linktree-card-tt:hover .linktree-card-icon i {
+    color: #ff0050;
+}
+
+.linktree-card-tt::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    transition: all 0.3s;
+}
+
+.linktree-card-tt:hover::before {
+    background: linear-gradient(to right, rgba(255, 0, 80, 0.2), transparent) !important;
+}
+
+.linktree-card-gg {
+    background: hsl(0, 0%, 5%);
+    border: 1px solid hsl(0, 0%, 15%);
+    height: 60px;
+    width: 350px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+    text-decoration: none;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.linktree-card-gg:hover {
+    border: 1px solid #FFBD00;
+}
+
+.linktree-card-gg:hover .linktree-card-icon {
+    border: 1px solid #FFBD00;
+    background: rgba(255, 189, 0, 0.1);
+}
+
+.linktree-card-gg:hover .linktree-card-icon i {
+    color: #FFBD00;
+}
+
+.linktree-card-gg::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    transition: all 0.3s;
+}
+
+.linktree-card-gg:hover::before {
+    background: linear-gradient(to right, rgba(255, 189, 0, 0.2), transparent) !important;
+}
+
+.linktree-footer {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.linktree-footer p {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: hsl(0, 0%, 30%);
+}
+
+.linktree-footer span {
+    font-weight: 800;
+}
+
+.linktree-prof {
+    height: 180px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.linktree-prof img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+}
+
+.linktree-descr {
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.linktree-descr h3 {
+    font-size: 1.4rem;
+    color: hsl(0, 0%, 95%);
+}
+
+.linktree-descr p {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: hsl(0, 0%, 30%); 
+}
+
+.vbg {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+}
+
+.vbg video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
