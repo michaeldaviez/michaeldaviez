@@ -48,6 +48,23 @@ body {
     border-radius: 50%;
 }
 
+.linktree-prof img:nth-child(2) {
+    margin-left: -38px;
+}
+
+.linktree-prof img:nth-child(1) {
+    -webkit-mask-image: radial-gradient(
+        circle 70px at calc(100% + 14px) 50%,
+        transparent 100%,
+        black 0
+    );
+    mask-image: radial-gradient(
+        circle 70px at calc(100% + 14px) 50%,
+        transparent 100%,
+        black 0
+    );
+}
+
 .link-description {
     min-height: 60px;
     margin-bottom: 15px;
@@ -151,6 +168,7 @@ body {
     border-radius: 16px;
     border: 1px solid hsl(0, 0%, 15%);
     box-shadow: 2px 0px 24px hsl(0, 0%, 10%);
+
 }
 
 .linktree-links {
@@ -159,6 +177,26 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 14px;
+}
+
+.linktree-card-yt, .linktree-card-tt, .linktree-card-gg {
+    overflow: hidden;
+}
+
+.linktree-card-yt::after, .linktree-card-tt::after, .linktree-card-gg::after {
+    content: '\f08e';
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    color: hsl(0, 0%, 30%);
+    right: -24px;
+    transition: all 0.3s;
+    opacity: 0;
+}
+
+.linktree-card-yt:hover::after, .linktree-card-tt:hover::after, .linktree-card-gg:hover::after {
+    right: 14px !important;
+    opacity: 1;
 }
 
 .linktree-card-yt {
@@ -177,6 +215,7 @@ body {
 
 .linktree-card-yt:hover {
     border: 1px solid red;
+    transform: scale(1.05);
 }
 
 .linktree-card-yt:hover .linktree-card-icon {
@@ -190,7 +229,7 @@ body {
 
 .linktree-card-yt::before {
     content: '';
-    width: 100%;
+    width: 0%;
     height: 100%;
     top: 0px;
     left: 0px;
@@ -200,6 +239,7 @@ body {
 
 .linktree-card-yt:hover::before {
     background: linear-gradient(to right, rgba(255, 0, 0, 0.2), transparent) !important;
+    width: 100% !important;
 }
 
 .linktree-card-icon {
@@ -221,6 +261,10 @@ body {
 
 .linktree-texts {
     padding: 0px 10px;
+    position: relative;
+    z-index: 1;
+    /* background: red; */
+    max-width: 250px;
 }
 
 .linktree-texts h4 {
@@ -251,6 +295,7 @@ body {
 
 .linktree-card-tt:hover {
     border: 1px solid #ff0050;
+    transform: scale(1.05);
 }
 
 .linktree-card-tt:hover .linktree-card-icon {
@@ -264,7 +309,7 @@ body {
 
 .linktree-card-tt::before {
     content: '';
-    width: 100%;
+    width: 0%;
     height: 100%;
     top: 0px;
     left: 0px;
@@ -274,6 +319,7 @@ body {
 
 .linktree-card-tt:hover::before {
     background: linear-gradient(to right, rgba(255, 0, 80, 0.2), transparent) !important;
+    width: 100% !important;
 }
 
 .linktree-card-gg {
@@ -292,6 +338,7 @@ body {
 
 .linktree-card-gg:hover {
     border: 1px solid #FFBD00;
+    transform: scale(1.05);
 }
 
 .linktree-card-gg:hover .linktree-card-icon {
@@ -305,7 +352,7 @@ body {
 
 .linktree-card-gg::before {
     content: '';
-    width: 100%;
+    width: 0%;
     height: 100%;
     top: 0px;
     left: 0px;
@@ -315,6 +362,50 @@ body {
 
 .linktree-card-gg:hover::before {
     background: linear-gradient(to right, rgba(255, 189, 0, 0.2), transparent) !important;
+    width: 100% !important;
+}
+
+.linktree-card-tw {
+    background: hsl(0, 0%, 5%);
+    border: 1px solid hsl(0, 0%, 15%);
+    height: 60px;
+    width: 350px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+    text-decoration: none;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.linktree-card-tw:hover {
+    border: 1px solid #9146FF;
+    transform: scale(1.05);
+}
+
+.linktree-card-tw:hover .linktree-card-icon {
+    border: 1px solid #9146FF;
+    background: rgba(145, 70, 255, 0.1);
+}
+
+.linktree-card-tw:hover .linktree-card-icon i {
+    color: #9146FF;
+}
+
+.linktree-card-tw::before {
+    content: '';
+    width: 0%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    transition: all 0.3s;
+}
+
+.linktree-card-tw:hover::before {
+    background: linear-gradient(to right, rgba(145, 70, 255, 0.2), transparent) !important;
+    width: 100% !important;
 }
 
 .linktree-footer {
