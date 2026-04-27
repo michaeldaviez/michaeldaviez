@@ -22,12 +22,13 @@ body {
 .link-box {
     background: linear-gradient(to top right, hsl(0, 0%, 5%) 65%, hsl(0, 0%, 5%, 0.7));
     width: 450px;
-    height: 650px;
+    min-height: 650px;
     border-radius: 16px;
     box-shadow: 4px 0px 24px black;
     position: relative;
     overflow: hidden;
     backdrop-filter: blur(14px);
+    user-select: none;
 }
 
 .link-prof {
@@ -36,6 +37,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    pointer-events: none;
 }
 
 .link-prof img {
@@ -61,7 +63,7 @@ body {
 }
 
 .link-links {
-    height: 340px;
+    min-height: 340px;
     width: 100%;
     display: flex;
     justify-content: center;
