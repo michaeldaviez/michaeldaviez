@@ -140,6 +140,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: absolute;
+    bottom: 0px;
 }
 
 .link-footer p {
@@ -414,6 +416,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: fixed;
+    bottom: 0px;
 }
 
 .linktree-footer p {
